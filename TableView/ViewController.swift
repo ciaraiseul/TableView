@@ -19,25 +19,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let conversations: [Conversation] = [
-            Conversation(avatarImage: "hinh1", name: "Pao Quán", lastMessage: "Tin nhắn 1", date: "16/01"),
-            Conversation(avatarImage: "hinh2", name: "Cộng đồng Cờ Vua", lastMessage: "Tin nhắn 2", date: "12/01"),
-            Conversation(avatarImage: "hinh3", name: "Tô Lâm", lastMessage: "Tin nhắn 3", date: "10/01"),
-            Conversation(avatarImage: "hinh4", name: "Vũ Xuân Phúc", lastMessage: "Tin nhắn 4", date: "09/01"),
-            Conversation(avatarImage: "hinh5", name: "Trần Đại Quang", lastMessage: "Tin nhắn 5", date: "09/01"),
-            Conversation(avatarImage: "hinh6", name: "Linh Mai", lastMessage: "Tin nhắn 6", date: "06/01"),
-            Conversation(avatarImage: "hinh7", name: "Lê Thành Nam", lastMessage: "Tin nhắn 7", date: "06/01"),
-            Conversation(avatarImage: "hinh8", name: "Đỗ Lâm Lâm", lastMessage: "Tin nhắn 8", date: "04/01"),
-            Conversation(avatarImage: "hinh9", name: "Phương Ly", lastMessage: "Tin nhắn 9", date: "31/12"),
-            Conversation(avatarImage: "hinh10", name: "Bánh Bao", lastMessage: "Tin nhắn 10", date: "29/12")
+        Conversation(avatarImage: "hinh1", name: "Pao Quán", lastMessage: "Tin nhắn 1", date: "16/01"),
+        Conversation(avatarImage: "hinh2", name: "Cộng đồng Cờ Vua", lastMessage: "Tin nhắn 2", date: "12/01"),
+        Conversation(avatarImage: "hinh3", name: "Tô Lâm", lastMessage: "Tin nhắn 3", date: "10/01"),
+        Conversation(avatarImage: "hinh4", name: "Vũ Xuân Phúc", lastMessage: "Tin nhắn 4", date: "09/01"),
+        Conversation(avatarImage: "hinh5", name: "Trần Đại Quang", lastMessage: "Tin nhắn 5", date: "09/01"),
+        Conversation(avatarImage: "hinh6", name: "Linh Mai", lastMessage: "Tin nhắn 6", date: "06/01"),
+        Conversation(avatarImage: "hinh7", name: "Lê Thành Nam", lastMessage: "Tin nhắn 7", date: "06/01"),
+        Conversation(avatarImage: "hinh8", name: "Đỗ Lâm Lâm", lastMessage: "Tin nhắn 8", date: "04/01"),
+        Conversation(avatarImage: "hinh9", name: "Phương Ly", lastMessage: "Tin nhắn 9", date: "31/12"),
+        Conversation(avatarImage: "hinh10", name: "Bánh Bao", lastMessage: "Tin nhắn 10", date: "29/12")
         ]
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
             
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ConversationCell")
-            tableView.separatorStyle = .singleLine
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ConversationCell")
+        tableView.separatorStyle = .singleLine
         }
     }
 
