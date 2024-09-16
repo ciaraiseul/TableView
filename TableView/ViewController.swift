@@ -45,10 +45,6 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-        
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected conversation: \(conversations[indexPath.row].name)")
-    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -67,6 +63,7 @@ extension ViewController: UITableViewDataSource {
             let itemSize = CGSize(width: 50, height: 50)
             UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale)
             let imageRect = CGRect(origin: CGPoint.zero, size: itemSize)
+            
             image.draw(in: imageRect)
             cell.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
@@ -78,13 +75,13 @@ extension ViewController: UITableViewDataSource {
         let labelWidth: CGFloat = 50
         let paddingRight: CGFloat = 15
         let dateLabel = UILabel(frame: CGRect(x: cell.contentView.frame.width - labelWidth - paddingRight, y: 10, width: labelWidth, height: 30))
+        
         dateLabel.text = conversation.date
         dateLabel.textAlignment = .right
         dateLabel.font = UIFont.systemFont(ofSize: 12)
         dateLabel.autoresizingMask = [.flexibleLeftMargin]
+        
         cell.contentView.addSubview(dateLabel)
-        
-        
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.layer.cornerRadius = 25
         cell.imageView?.clipsToBounds = true

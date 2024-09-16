@@ -24,13 +24,10 @@ class Table2ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
-        
         tableView.separatorColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1.0)
     }
-
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -101,10 +98,5 @@ class Table2ViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return 10
         }
         return 60
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Tapped on: \(settings[indexPath.section][indexPath.row])")
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
