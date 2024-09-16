@@ -31,9 +31,6 @@ class Table2ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.separatorColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1.0)
     }
 
-    @objc func backButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
